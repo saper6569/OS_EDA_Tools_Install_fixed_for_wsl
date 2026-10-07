@@ -41,8 +41,8 @@ cd ..
 cd ~/eda_tools/ 
 git clone git://opencircuitdesign.com/magic
 cd magic 
-./configure
-make 
+./configure CFLAGS=-std=gnu17
+make -j$(nproc)
 sudo make install 
 cd ..
 
